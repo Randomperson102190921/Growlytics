@@ -4,75 +4,75 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Hand-drawn retro mobile theme with deep greens */
-  --background: #fffdf8;
-  --foreground: #1a2e1a;
-  --card: #fffdf8;
-  --card-foreground: #1a2e1a;
-  --popover: #fffdf8;
-  --popover-foreground: #1a2e1a;
-  --primary: #1e5631;
+  /* Clean mobile app theme with modern greens */
+  --background: #ffffff;
+  --foreground: #111827;
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --popover: #ffffff;
+  --popover-foreground: #111827;
+  --primary: #059669;
   --primary-foreground: #ffffff;
-  --secondary: #f0f7f0;
-  --secondary-foreground: #1e5631;
-  --muted: #e8f5e9;
-  --muted-foreground: #4a5a4a;
-  --accent: #2d6a3d;
+  --secondary: #f3f4f6;
+  --secondary-foreground: #374151;
+  --muted: #f9fafb;
+  --muted-foreground: #6b7280;
+  --accent: #10b981;
   --accent-foreground: #ffffff;
-  --destructive: #c62828;
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #1a2e1a;
-  --input: #fdfaf4;
-  --ring: #2d6a3d;
-  --chart-1: #1e5631;
-  --chart-2: #2d6a3d;
-  --chart-3: #3d7e4d;
-  --chart-4: #4d925d;
-  --chart-5: #5da66d;
-  --radius: 0.5rem;
-  --sidebar: #fffdf8;
-  --sidebar-foreground: #1a2e1a;
-  --sidebar-primary: #1e5631;
+  --border: #e5e7eb;
+  --input: #ffffff;
+  --ring: #059669;
+  --chart-1: #059669;
+  --chart-2: #10b981;
+  --chart-3: #34d399;
+  --chart-4: #6ee7b7;
+  --chart-5: #a7f3d0;
+  --radius: 0.75rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #111827;
+  --sidebar-primary: #059669;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #e8f5e9;
-  --sidebar-accent-foreground: #1e5631;
-  --sidebar-border: #1a2e1a;
-  --sidebar-ring: #2d6a3d;
+  --sidebar-accent: #f3f4f6;
+  --sidebar-accent-foreground: #374151;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #059669;
 }
 
 .dark {
-  --background: #0d1b0d;
-  --foreground: #e8f5e9;
-  --card: #1a2e1a;
-  --card-foreground: #e8f5e9;
-  --popover: #1a2e1a;
-  --popover-foreground: #e8f5e9;
-  --primary: #4d925d;
-  --primary-foreground: #0d1b0d;
-  --secondary: #2d4a2d;
-  --secondary-foreground: #e8f5e9;
-  --muted: #3d5a3d;
-  --muted-foreground: #9db59d;
-  --accent: #2d6a3d;
-  --accent-foreground: #e8f5e9;
-  --destructive: #ef5350;
-  --destructive-foreground: #e8f5e9;
-  --border: #e8f5e9;
-  --input: #1a2e1a;
-  --ring: #4d925d;
-  --chart-1: #4d925d;
-  --chart-2: #5da66d;
-  --chart-3: #6dba7d;
-  --chart-4: #7dce8d;
-  --chart-5: #8de29d;
-  --sidebar: #1a2e1a;
-  --sidebar-foreground: #e8f5e9;
-  --sidebar-primary: #4d925d;
-  --sidebar-primary-foreground: #0d1b0d;
-  --sidebar-accent: #2d4a2d;
-  --sidebar-accent-foreground: #e8f5e9;
-  --sidebar-border: #e8f5e9;
-  --sidebar-ring: #4d925d;
+  --background: #111827;
+  --foreground: #f9fafb;
+  --card: #1f2937;
+  --card-foreground: #f9fafb;
+  --popover: #1f2937;
+  --popover-foreground: #f9fafb;
+  --primary: #10b981;
+  --primary-foreground: #111827;
+  --secondary: #374151;
+  --secondary-foreground: #f9fafb;
+  --muted: #374151;
+  --muted-foreground: #9ca3af;
+  --accent: #059669;
+  --accent-foreground: #f9fafb;
+  --destructive: #ef4444;
+  --destructive-foreground: #f9fafb;
+  --border: #374151;
+  --input: #1f2937;
+  --ring: #10b981;
+  --chart-1: #10b981;
+  --chart-2: #34d399;
+  --chart-3: #6ee7b7;
+  --chart-4: #a7f3d0;
+  --chart-5: #d1fae5;
+  --sidebar: #1f2937;
+  --sidebar-foreground: #f9fafb;
+  --sidebar-primary: #10b981;
+  --sidebar-primary-foreground: #111827;
+  --sidebar-accent: #374151;
+  --sidebar-accent-foreground: #f9fafb;
+  --sidebar-border: #374151;
+  --sidebar-ring: #10b981;
 }
 
 @theme inline {
@@ -129,119 +129,113 @@
 }
 
 @layer utilities {
-  .retro-card {
+  .app-card {
     background: var(--card);
-    border: 2px solid var(--border);
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    position: relative;
-    box-shadow: 4px 4px 0 var(--border);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease;
   }
 
-  .retro-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 6px 6px 0 var(--border);
+  .app-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
-  .retro-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.05) 0px,
-      rgba(0, 0, 0, 0.05) 1px,
-      transparent 2px
-    );
-    pointer-events: none;
-    opacity: 0.25;
-    border-radius: inherit;
-  }
-
-  .retro-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent 0px,
-      transparent 2px,
-      rgba(0, 0, 0, 0.03) 2px,
-      rgba(0, 0, 0, 0.03) 3px
-    );
-    pointer-events: none;
-    animation: scanline 2s linear infinite;
-    border-radius: inherit;
-  }
-
-  @keyframes scanline {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-3px); }
-  }
-
-  .retro-button {
+  .app-button {
     background: var(--primary);
     color: var(--primary-foreground);
-    border: 2px solid var(--border);
-    border-radius: 0.5rem;
+    border: 1px solid var(--primary);
+    border-radius: var(--radius);
     padding: 0.75rem 1.5rem;
     font-weight: 600;
-    box-shadow: 3px 3px 0 var(--border);
+    font-size: 0.875rem;
     transition: all 0.2s ease;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
   }
 
-  .retro-button:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 5px 5px 0 var(--border);
+  .app-button:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
   }
 
-  .retro-button:active {
-    transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0 var(--border);
+  .app-button:active {
+    transform: translateY(0);
   }
 
-  .retro-input {
+  .app-button-secondary {
+    background: var(--secondary);
+    color: var(--secondary-foreground);
+    border: 1px solid var(--border);
+  }
+
+  .app-button-secondary:hover {
+    background: var(--muted);
+    border-color: var(--border);
+  }
+
+  .app-input {
     background: var(--input);
-    border: 2px solid var(--border);
-    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
     padding: 0.75rem;
-    box-shadow: inset -2px -2px 0 var(--border);
+    font-size: 0.875rem;
     transition: all 0.2s ease;
+    width: 100%;
   }
 
-  .retro-input:focus {
+  .app-input:focus {
     outline: none;
-    box-shadow: inset -2px -2px 0 var(--primary), 0 0 0 3px rgba(45, 106, 61, 0.2);
-  }
-
-  .paper-texture {
-    position: relative;
-  }
-
-  .paper-texture::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.05) 0px,
-      rgba(0, 0, 0, 0.05) 1px,
-      transparent 2px
-    );
-    pointer-events: none;
-    opacity: 0.25;
-  }
-
-  .hand-drawn-border {
-    border: 2px solid var(--border);
-    box-shadow: 4px 4px 0 var(--border);
+    border-color: var(--ring);
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
   }
 
   .mobile-container {
     max-width: 480px;
     margin: 0 auto;
     min-height: 100vh;
+    background: var(--background);
+  }
+
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Mobile-first responsive utilities */
+  .mobile-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .mobile-spacing {
+    gap: 1rem;
+  }
+
+  /* Loading states */
+  .loading-shimmer {
+    background: linear-gradient(90deg, var(--muted) 25%, transparent 50%, var(--muted) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* Touch-friendly interactions */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
   }
 }

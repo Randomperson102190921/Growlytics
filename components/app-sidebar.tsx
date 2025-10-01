@@ -84,7 +84,7 @@ export function AppSidebar() {
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild isActive={pathname === item.url} onClick={() => router.push(item.url)}>
-                    <button className={`flex items-center gap-3 w-full mx-2 px-3 py-2 rounded-lg transition-all ${pathname === item.url ? "bg-primary text-primary-foreground font-bold shadow-[2px_2px_0_var(--border)]" : "hover:bg-accent"}`}>
+                    <button className={`flex items-center gap-3 w-full mx-2 px-3 py-3 rounded-lg transition-all touch-target ${pathname === item.url ? "bg-primary text-primary-foreground font-semibold" : "hover:bg-accent"}`}>
                       <item.icon className="w-5 h-5" />
                       <span>{item.title}</span>
                     </button>
@@ -96,19 +96,19 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <div className="p-4 border-t-2 border-border">
-          <div className="retro-card mb-3 p-3 bg-background/50">
+        <div className="p-4 border-t border-border">
+          <div className="mb-3 p-3 bg-secondary rounded-lg">
             <div className="flex items-center gap-3">
-              <div className="retro-card w-10 h-10 flex items-center justify-center bg-primary/10 text-primary text-sm font-bold">
+              <div className="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary text-sm font-bold rounded-full">
                 {getInitials(user.displayName || user.email || "U")}
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-bold text-foreground truncate">{user.displayName || "User"}</p>
+                <p className="text-sm font-semibold text-foreground truncate">{user.displayName || "User"}</p>
                 <p className="text-xs text-muted-foreground truncate">{user.email}</p>
               </div>
             </div>
           </div>
-          <button onClick={handleLogout} className="retro-button w-full flex items-center justify-center gap-2">
+          <button onClick={handleLogout} className="app-button-secondary w-full touch-target">
             <LogOut className="w-4 h-4" />
             Sign Out
           </button>
